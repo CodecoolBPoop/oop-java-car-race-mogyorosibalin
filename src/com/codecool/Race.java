@@ -42,6 +42,13 @@ public class Race {
 
     boolean isThereBrokenTruck() {
         //TODO: Decide if there is a broken truck in the race.
+        for (Vehicle vehicle : vehicleList) {
+            if (vehicle instanceof Truck) {
+                if (((Truck) vehicle).isBrokenDown()) {
+                    return true;
+                }
+            }
+        }
         return false;
     }
 
