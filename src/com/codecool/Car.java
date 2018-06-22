@@ -8,7 +8,7 @@ public class Car extends Vehicle {
 
     Car() {
         normalSpeed = rand.nextInt(31) + 80;
-        name = rand.nextInt(carNames.length) + " " + rand.nextInt(carNames.length);
+        name = carNames[rand.nextInt(carNames.length)] + " " + carNames[rand.nextInt(carNames.length)];
     }
 
     void moveForAnHour(Race race) {

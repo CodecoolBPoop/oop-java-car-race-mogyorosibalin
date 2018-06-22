@@ -9,4 +9,9 @@ public abstract class Vehicle {
     Random rand = new Random();
 
     abstract void moveForAnHour(Race race);
+
+    @Override
+    public String toString() {
+        return "Name: " + name + " | Distance traveled: " + distanceTraveled;
+    }
 }
