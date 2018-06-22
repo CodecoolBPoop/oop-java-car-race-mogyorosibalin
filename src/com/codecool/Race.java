@@ -1,6 +1,8 @@
 package com.codecool;
 
 public class Race {
+    Weather weather = new Weather();
+
     void createVehicles() {
         //TODO: Creates 10 cars, 10 trucks and 10 motorcycles
     }
@@ -18,6 +20,11 @@ public class Race {
     boolean isThereBrokenTruck() {
         //TODO: Decide if there is a broken truck in the race.
         return false;
+    }
+
+    boolean isRaining() {
+        //TODO: Decide if it is raining now.
+        return weather.isRaining();
     }
 
     public static void main(String[] args) {

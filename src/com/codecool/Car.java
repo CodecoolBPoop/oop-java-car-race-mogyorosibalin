@@ -5,6 +5,7 @@ public class Car extends Vehicle {
     static String[] carNames = new String[] {"Whim", "Centurion", "Conqueror", "Tigress",
             "Daydream", "Aurora", "Spirit", "Expedition", "Freedom", "Aeon", "Prime", "Vortex",
             "Portrait", "Purity", "Radiance", "Obsidian", "Vanish", "Scorpion", "Pinnacle", "Fragment"};
+
     Car() {
         normalSpeed = rand.nextInt(31) + 80;
         name = rand.nextInt(carNames.length) + " " + rand.nextInt(carNames.length);
