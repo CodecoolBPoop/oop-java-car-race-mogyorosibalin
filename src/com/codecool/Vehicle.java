@@ -10,6 +10,10 @@ public abstract class Vehicle {
 
     abstract void moveForAnHour(Race race);
 
+    long getDistanceTraveled() {
+        return distanceTraveled;
+    }
+
     @Override
     public String toString() {
         return "Name: " + name + " | Distance traveled: " + distanceTraveled;

@@ -1,5 +1,7 @@
 package com.codecool;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import java.util.ArrayList;
 
@@ -41,6 +43,15 @@ public class Race {
         }
     }
 
+    void sortVehiclesByDistanceTraveled() {
+        Collections.sort(vehicleList, new Comparator<Vehicle>() {
+            @Override
+            public int compare(Vehicle o1, Vehicle o2) {
+                return (int)o2.getDistanceTraveled() - (int)o1.getDistanceTraveled();
+            }
+        });
+    }
+
     void printRaceResults() {
         //TODO: Prints each vehicle's name, distance traveled and type.
         for (Vehicle vehicle : vehicleList) {
@@ -70,6 +81,7 @@ public class Race {
         Race race = new Race();
         race.createVehicles();
         race.simulateRace();
+        race.sortVehiclesByDistanceTraveled();
         race.printRaceResults();
     }
 }
