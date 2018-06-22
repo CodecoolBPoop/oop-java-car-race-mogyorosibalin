@@ -1,11 +1,12 @@
 package com.codecool;
 
-public class Vehicle {
+import java.util.Random;
+
+public abstract class Vehicle {
     int normalSpeed;
     String name;
     long distanceTraveled = 0;
+    Random rand = new Random();
 
-    void moveForAnHour(Race race) {
-
-    }
+    abstract void moveForAnHour(Race race);
 }
