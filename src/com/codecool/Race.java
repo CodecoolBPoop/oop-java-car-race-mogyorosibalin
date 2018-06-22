@@ -10,6 +10,8 @@ public class Race {
 
     List<Vehicle> vehicleList = new ArrayList<Vehicle>(vehicleNum);
 
+    final int raceHours = 50;
+
     void createVehicles() {
         //TODO: Creates 10 cars, 10 trucks and 10 motorcycles
         for (int i = 0; i < vehicleNum; i++) {
@@ -31,6 +33,12 @@ public class Race {
         //TODO: Simulates the race by
         // - calling moveForAnHour() on every vehicle 50 times
         // - setting whether its raining.
+        for (int i = 0; i < raceHours; i++) {
+            weather.setRaining();
+            for (Vehicle vehicle : vehicleList) {
+                vehicle.moveForAnHour(this);
+            }
+        }
     }
 
     void printRaceResults() {
@@ -61,6 +69,7 @@ public class Race {
 	    // write your code here
         Race race = new Race();
         race.createVehicles();
+        race.simulateRace();
         race.printRaceResults();
     }
 }
